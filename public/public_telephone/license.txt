@@ -1,0 +1,11 @@
+Model Information:
+* title:	Public Telephone
+* source:	https://sketchfab.com/3d-models/public-telephone-e3899ef915154ca99696f0afb1c05aa7
+* author:	NurulAthyrah (https://sketchfab.com/Nurul_Athyrah)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Public Telephone" (https://sketchfab.com/3d-models/public-telephone-e3899ef915154ca99696f0afb1c05aa7) by NurulAthyrah (https://sketchfab.com/Nurul_Athyrah) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
