@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
+import Card from "./Card";
 
 const Tech = () => {
   return (
@@ -16,7 +17,7 @@ const Tech = () => {
           Technical Skills.
         </h2>
       </motion.div>
-      <div className="flex flex-row flex-wrap justify-center gap-10">
+      <div className="hidden lg:flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
             <BallCanvas icon={technology.icon} />
@@ -26,8 +27,19 @@ const Tech = () => {
           </div>
         ))}
       </div>
+      <div className="flex lg:hidden flex-row flex-wrap gap-10 mt-20">
+        {technologies.map((technology, index) => (
+          <Card
+            key={technology.name}
+            index={index}
+            title={technology.name}
+            icon={technology.icon}
+            animate={false}
+          />
+        ))}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "tech");
