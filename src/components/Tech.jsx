@@ -11,7 +11,13 @@ import Card from "./Card";
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div className="lg:hidden">
+        <p className={`${styles.sectionSubText} text-center`}>My Tech Stack</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          Technical Skills.
+        </h2>
+      </div>
+      <motion.div className="hidden lg:block" variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>My Tech Stack</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Technical Skills.

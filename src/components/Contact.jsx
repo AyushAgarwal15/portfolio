@@ -135,7 +135,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
+        className="hidden lg:block xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
       >
         <MenCanvas />
       </motion.div>

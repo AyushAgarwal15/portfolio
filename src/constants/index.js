@@ -52,6 +52,9 @@ const services = [
   },
 ];
 
+const intro =
+  "I'm a Software Engineer with strong expertise in HTML, CSS, JavaScript, TypeScript, and Tailwind CSS, specializing in React.js and knowledgeable in Next.js. I have hands-on experience in building dynamic, responsive web applications, optimizing code for efficiency, and using libraries like Redux and React Query. I'm a quick learner who excels in collaborative environments, consistently delivering scalable, user-focused solutions that solve real-world problems. Let's work together to bring your ideas to life and create a high-performance digital experience!";
+
 const technologies = [
   {
     name: "HTML",
@@ -193,4 +196,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, intro, technologies, experiences, projects };
