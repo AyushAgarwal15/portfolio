@@ -9,16 +9,16 @@ import eye from "./The_Eye_Icon.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import html from "./tech/html.png";
 import css from "./tech/css.png";
+import javascript from "./tech/javascript.png";
+import typescript from "./tech/typescript.png";
+import reactjs from "./tech/reactjs.png";
 import figma from "./tech/figma.png";
 import java from "./tech/java.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import reactQuery from "./tech/react-query.png";
 
@@ -26,7 +26,6 @@ import mile9 from "./company/mile9.png";
 
 import socialBond from "./social-bond.png";
 import sumit from "./sumit.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -52,7 +51,6 @@ export {
   threejs,
   socialBond,
   sumit,
-  tripguide,
   reactQuery,
   mile9,
 };
