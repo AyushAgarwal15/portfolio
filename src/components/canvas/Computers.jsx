@@ -5,15 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./gaming_desktop/scene.gltf");
-  const [isRadiusNan, setIsRadiusNan] = useState(false);
-  useEffect(() => {
-    computer.scene.traverse((child) => {
-      if (child.isMesh) {
-        setIsRadiusNan(isNaN(child.geometry));
-      }
-    });
-  }, [computer]);
+  const computer = useGLTF("./planet/scene.gltf");
 
   return (
     <mesh>
@@ -27,14 +19,12 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
-      {computer.scene && !isRadiusNan ? (
-        <primitive
-          object={computer?.scene}
-          scale={isMobile ? 0.7 : 0.75}
-          position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-          rotation={[-0.01, -0.2, -0.1]}
-        />
-      ) : null}
+      <primitive
+        object={computer?.scene}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
+      />
     </mesh>
   );
 };
