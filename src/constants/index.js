@@ -137,6 +137,12 @@ const experiences = [
   },
 ];
 
+const worksText = `Following projects showcases my skills and experience through
+              real-world examples of my work. Each project is briefly described
+              with links to code repositories and live demos in it. It reflects
+              my ability to solve complex problems, work with different
+              technologies, and manage projects effectively.`;
+
 const projects = [
   {
     name: "Social Bond",
@@ -196,4 +202,4 @@ const projects = [
   },
 ];
 
-export { services, intro, technologies, experiences, projects };
+export { services, intro, technologies, experiences, worksText, projects };

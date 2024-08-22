@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -61,16 +61,36 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 1024);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
-        </h2>
-      </motion.div>
+      {isSmallScreen ? (
+        <div>
+          {" "}
+          <p className={`${styles.sectionSubText} text-center`}>
+            What I have done so far
+          </p>
+          <h2 className={`${styles.sectionHeadText} text-center`}>
+            Work Experience.
+          </h2>
+        </div>
+      ) : (
+        <motion.div variants={textVariant()}>
+          <p className={`${styles.sectionSubText} text-center`}>
+            What I have done so far
+          </p>
+          <h2 className={`${styles.sectionHeadText} text-center`}>
+            Work Experience.
+          </h2>
+        </motion.div>
+      )}
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
