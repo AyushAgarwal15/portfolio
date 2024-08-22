@@ -48,21 +48,34 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
+        <ul className="list-none hidden md:flex flex-row gap-10">
+          {navLinks.map((nav) =>
+            nav.id === "resume" ? (
+              <a
+                key={nav.id}
+                target="_blank"
+                href="https://drive.google.com/file/d/1-NGWeGlWsTiiDnmWFfXz6CT1tR1D34kT/view"
+                className={
+                  "text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
+                }
+              >
+                {nav.title}
+              </a>
+            ) : (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            )
+          )}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
