@@ -5,12 +5,13 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Planet = ({ isSmallScreen }) => {
-  const planet = useGLTF("./planet/scene.gltf");
+  const planet = useGLTF("./planet_earth2/scene.gltf");
 
   return (
     <primitive
       object={planet.scene}
-      scale={isSmallScreen ? 1.8 : 2.2}
+      scale={isSmallScreen ? 0.2 : 0.4}
+      // scale={isSmallScreen ? 1.8 : 2.2}
       position-y={isSmallScreen ? -2 : -1.6}
       position-x={isSmallScreen ? -1.5 : -2.5}
       rotation-y={0}
