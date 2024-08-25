@@ -13,6 +13,7 @@ import {
   java,
   socialBond,
   sumit,
+  hirix,
   threejs,
   reactQuery,
   mile9,
@@ -177,6 +178,36 @@ const projects = [
     image: socialBond,
     source_code_link: "https://github.com/AyushAgarwal15/social-bond",
     live_link: "https://social-bond.vercel.app/sign-in",
+  },
+  {
+    name: "Hirix",
+    description:
+      "HIRIX is a modern job portal that connects job seekers with employers and helps employers find bright candidates. Key Features - Job Listing, Job Search & Filtering, Application Tracking, Saved Jobs, Post Jobs, Check Applicants etc",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Clerk",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react-hook-form",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: hirix,
+    source_code_link: "https://github.com/AyushAgarwal15/Hirix",
+    live_link: "https://hirix.vercel.app/",
   },
   {
     name: "SUMIT",

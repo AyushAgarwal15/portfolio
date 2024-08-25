@@ -26,6 +26,7 @@ import mile9 from "./company/mile9.png";
 
 import socialBond from "./social-bond.png";
 import sumit from "./sumit.png";
+import hirix from "./hirix.png";
 
 export {
   logo,
@@ -51,6 +52,7 @@ export {
   threejs,
   socialBond,
   sumit,
+  hirix,
   reactQuery,
   mile9,
 };
