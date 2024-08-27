@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Tilt from "react-tilt";
@@ -15,6 +15,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({ name: "", message: "" });
 
   const [loading, setLoading] = useState(false);
 
@@ -28,8 +29,29 @@ const Contact = () => {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = { name: "", message: "" };
+    let isValid = true;
+
+    if (form.name.trim() === "") {
+      newErrors.name = "Name is required.";
+      isValid = false;
+    }
+
+    if (form.message.trim() === "") {
+      newErrors.message = "Message is required.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
+
     setLoading(true);
 
     emailjs
@@ -65,6 +87,11 @@ const Contact = () => {
       );
   };
 
+  useEffect(() => {
+    if (form.name) setErrors((prev) => ({ ...prev, name: "" }));
+    if (form.message) setErrors((prev) => ({ ...prev, message: "" }));
+  }, [form.name, form.message]);
+
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
@@ -82,7 +109,7 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white font-medium mb-4">*Your Name</span>
             <input
               type="text"
               name="name"
@@ -91,6 +118,9 @@ const Contact = () => {
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && (
+              <p className="text-red-500 text-lg">{errors.name}</p>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -104,7 +134,7 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="text-white font-medium mb-4">*Your Message</span>
             <textarea
               rows={7}
               name="message"
@@ -113,6 +143,9 @@ const Contact = () => {
               placeholder="What you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.message && (
+              <p className="text-red-500 text-lg">{errors.message}</p>
+            )}
           </label>
           <Tilt
             options={{
