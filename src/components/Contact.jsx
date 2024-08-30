@@ -15,7 +15,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState({ name: "", message: "" });
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
 
   const [loading, setLoading] = useState(false);
 
@@ -33,8 +33,20 @@ const Contact = () => {
     const newErrors = { name: "", message: "" };
     let isValid = true;
 
+    // Regular expression to match special characters
+    const specialCharRegex = /[^a-zA-Z0-9\s]/;
+
+    // Regular expression to match email addresses
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Check if the name field is empty
     if (form.name.trim() === "") {
       newErrors.name = "Name is required.";
+      isValid = false;
+    }
+    // Check if the name contains special characters
+    else if (specialCharRegex.test(form.name)) {
+      newErrors.name = "Name should not contain special characters.";
       isValid = false;
     }
 
@@ -43,6 +55,14 @@ const Contact = () => {
       isValid = false;
     }
 
+    // Validate the email field
+    if (form.email.trim() === "") {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!emailRegex.test(form.email)) {
+      newErrors.email = "Please enter a valid email address.";
+      isValid = false;
+    }
     setErrors(newErrors);
     return isValid;
   };
@@ -89,8 +109,9 @@ const Contact = () => {
 
   useEffect(() => {
     if (form.name) setErrors((prev) => ({ ...prev, name: "" }));
+    if (form.email) setErrors((prev) => ({ ...prev, email: "" }));
     if (form.message) setErrors((prev) => ({ ...prev, message: "" }));
-  }, [form.name, form.message]);
+  }, [form.name, form.email, form.message]);
 
   return (
     <div
@@ -123,15 +144,18 @@ const Contact = () => {
             )}
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
+            <span className="text-white font-medium mb-4">*Your email</span>
             <input
-              type="email"
+              type="text"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && (
+              <p className="text-red-500 text-lg">{errors.email}</p>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">*Your Message</span>

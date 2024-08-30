@@ -1,4 +1,4 @@
-import { github, linkedin } from "../assets";
+import { github, linkedin, twitter } from "../assets";
 import Tilt from "react-tilt";
 function Footer() {
   return (
@@ -54,6 +54,25 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <img src={linkedin} alt="linkedin" className="w-10 h-10" />
+          </a>
+        </Tilt>
+        <Tilt
+          options={{
+            max: 50,
+            scale: 1,
+            speed: 450,
+          }}
+        >
+          <a
+            href="https://x.com/Ayush_Agg15?t=d5m1lTalQ3vncaHMvaDpgA&s=09"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={twitter}
+              alt="twitter"
+              className="w-10 h-10 rounded-full"
+            />
           </a>
         </Tilt>
       </div>

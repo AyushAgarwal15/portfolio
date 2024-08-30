@@ -5,6 +5,7 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
 import linkedin from "./linkedin.webp";
+import twitter from "./twitter.webp";
 import eye from "./The_Eye_Icon.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -36,6 +37,7 @@ export {
   web,
   github,
   linkedin,
+  twitter,
   eye,
   menu,
   close,
