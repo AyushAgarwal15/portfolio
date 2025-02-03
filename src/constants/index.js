@@ -114,7 +114,7 @@ const experiences = [
     icon: mile9,
     iconBg: "#E6DEDD",
     date: "Mar 2024 - Present",
-    company_link: "https://www.linkedin.com/company/mile9/mycompany/",
+    company_link: "https://mile9.io/",
     points: [
       "Portfolio Development - Developed a dynamic and responsive portfolio site for the company using Next.js, enhancing the online presence and improving user engagement.",
       "Code Optimization - Implemented strategic code refactoring, leveraging React components and hooks to enhance reusability and code maintainability. Build reusable components that can be used across all apps. Optimized component structure and state management, resulting in a 40% codebase reduction and a 35% faster app load time.",
@@ -129,7 +129,7 @@ const experiences = [
     icon: mile9,
     iconBg: "#E6DEDD",
     date: "Oct 2023 - Feb 2024",
-    company_link: "https://www.linkedin.com/company/mile9/mycompany/",
+    company_link: "https://mile9.io/",
     points: [
       "Gained Expertise in Cutting-Edge Web Technologies - Acquired practical expertise in innovative technologies such as React.js, HTML, CSS, JavaScript, TypeScript, and Tailwind CSS.",
       "Enhanced System Functionality - Implemented critical features such as a comprehensive billing form system, report review comments, and a patient data filtering modal, significantly enhancing system functionality",
