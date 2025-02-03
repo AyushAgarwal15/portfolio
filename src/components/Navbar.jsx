@@ -54,7 +54,7 @@ const Navbar = () => {
               <a
                 key={nav.id}
                 target="_blank"
-                href="https://drive.google.com/file/d/10C9FJfam2fKr_7qa4Y1MVWJQb9oqw2_G/view"
+                href="https://drive.google.com/drive/folders/1u2C5n6Q1wt3Vm4h7H4Wo74GR6ZgXHRxE"
                 className={
                   "text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
                 }
