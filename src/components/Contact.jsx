@@ -48,10 +48,16 @@ const Contact = () => {
     else if (specialCharRegex.test(form.name)) {
       newErrors.name = "Name should not contain special characters.";
       isValid = false;
+    } else if (form.name.length < 3) {
+      newErrors.name = "Name should be at least 3 characters long.";
+      isValid = false;
     }
 
     if (form.message.trim() === "") {
       newErrors.message = "Message is required.";
+      isValid = false;
+    } else if (form.message.trim().length > 1000) {
+      newErrors.message = "Message should be less than 1000 characters.";
       isValid = false;
     }
 
@@ -167,6 +173,9 @@ const Contact = () => {
               placeholder="What you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            <p className="text-white text-sm w-full text-right mt-4">
+              {form.message.length}/1000 characters left.
+            </p>
             {errors.message && (
               <p className="text-red-500 text-lg">{errors.message}</p>
             )}

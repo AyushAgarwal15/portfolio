@@ -1,30 +1,54 @@
-import { github, linkedin, twitter } from "../assets";
+import { github, linkedin, twitter, email, phone } from "../assets";
 import Tilt from "react-tilt";
 function Footer() {
   return (
-    <footer className="bg-primary flex flex-col md:flex-row items-center justify-center md:justify-around py-6 gap-4 flex-wrap shadow-lg shadow-white">
-      <div>
-        {" "}
-        <p className="text-sm text-white">
-          Email:{" "}
-          <a
-            href="mailto:ayushagarwal8126@gmail.com"
-            className="underline text-secondary hover:text-white cursor-pointer"
-          >
-            ayushagarwal8126@gmail.com
+    <footer className="bg-primary flex flex-col md:flex-row items-center justify-center md:justify-around py-4 gap-4 flex-wrap shadow-lg shadow-white">
+      <p className="text-base text-secondary text-center">
+        &copy; 2025 Ayush Agarwal. All rights reserved.
+      </p>
+      <div className="flex items-center gap-4 px-4 md:px-0">
+        <Tilt
+          options={{
+            max: 50,
+            scale: 1,
+            speed: 450,
+          }}
+        >
+          <a href="mailto:ayushagarwal8126@gmail.com">
+            <img src={email} alt="email" className="w-11 h-11 rounded-full" />
           </a>
-        </p>
-        <p className="text-sm text-white">
-          Phone:{" "}
-          <a
-            href="tel:+918126749140"
-            className="underline text-secondary cursor-pointer hover:text-white"
-          >
-            +91 8126749140
+        </Tilt>
+        <Tilt
+          options={{
+            max: 50,
+            scale: 1,
+            speed: 450,
+          }}
+        >
+          <a href="tel:+918126749140">
+            <img
+              src={phone}
+              alt="phone"
+              className="w-[3.5rem] h-[3.5rem] rounded-full"
+            />
           </a>
-        </p>
-      </div>
-      <div className="flex gap-4">
+        </Tilt>
+
+        <Tilt
+          options={{
+            max: 50,
+            scale: 1,
+            speed: 450,
+          }}
+        >
+          <a
+            href="https://www.linkedin.com/in/ayushagarwal15/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} alt="linkedin" className="w-11 h-11" />
+          </a>
+        </Tilt>
         <Tilt
           options={{
             max: 50,
@@ -38,22 +62,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={github} alt="github" className="w-10 h-10" />
-          </a>
-        </Tilt>
-        <Tilt
-          options={{
-            max: 50,
-            scale: 1,
-            speed: 450,
-          }}
-        >
-          <a
-            href="https://www.linkedin.com/in/ayushagarwal15/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={linkedin} alt="linkedin" className="w-10 h-10" />
+            <img src={github} alt="github" className="w-11 h-11" />
           </a>
         </Tilt>
         <Tilt
@@ -71,14 +80,11 @@ function Footer() {
             <img
               src={twitter}
               alt="twitter"
-              className="w-10 h-10 rounded-full"
+              className="w-11 h-11 rounded-full"
             />
           </a>
         </Tilt>
       </div>
-      <p className="text-sm text-secondary">
-        &copy; 2024 Ayush Agarwal. All rights reserved.
-      </p>
     </footer>
   );
 }

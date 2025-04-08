@@ -9,6 +9,8 @@ import twitter from "./twitter.webp";
 import eye from "./The_Eye_Icon.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import email from "./email.png";
+import phone from "./phone.png";
 
 import html from "./tech/html.png";
 import css from "./tech/css.png";
@@ -24,6 +26,8 @@ import threejs from "./tech/threejs.svg";
 import reactQuery from "./tech/react-query.png";
 
 import mile9 from "./company/mile9.png";
+
+import myImg from "./my-image/my-image.jpg";
 
 import socialBond from "./social-bond.png";
 import sumit from "./sumit.png";
@@ -41,6 +45,8 @@ export {
   eye,
   menu,
   close,
+  email,
+  phone,
   css,
   figma,
   java,
@@ -57,4 +63,5 @@ export {
   hirix,
   reactQuery,
   mile9,
+  myImg,
 };

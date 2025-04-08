@@ -17,6 +17,7 @@ import {
   threejs,
   reactQuery,
   mile9,
+  myImg,
 } from "../assets";
 
 export const navLinks = [
@@ -40,6 +41,10 @@ export const navLinks = [
 
 const services = [
   {
+    title: "Software Developer",
+    icon: backend,
+  },
+  {
     title: "Front-End Developer",
     icon: web,
   },
@@ -48,17 +53,16 @@ const services = [
     icon: reactjs,
   },
   {
-    title: "Software Developer",
-    icon: backend,
-  },
-  {
     title: "JavaScript Developer",
     icon: javascript,
   },
 ];
 
-const intro =
-  "I'm a Software Engineer with strong expertise in HTML, CSS, JavaScript, TypeScript, and Tailwind CSS, specializing in React.js and knowledgeable in Next.js. I have hands-on experience in building dynamic, responsive web applications, optimizing code for efficiency, and using libraries like Redux and React Query. I'm a quick learner who excels in collaborative environments, consistently delivering scalable, user-focused solutions that solve real-world problems. Let's work together to bring your ideas to life and create a high-performance digital experience!";
+const about = {
+  intro:
+    "I'm a Software Engineer with strong expertise in HTML, CSS, JavaScript, TypeScript, and Tailwind CSS, specializing in React.js and knowledgeable in Next.js. I have hands-on experience in building dynamic, responsive web applications, optimizing code for efficiency, and using libraries like Redux and React Query. I'm a quick learner who excels in collaborative environments, consistently delivering scalable, user-focused solutions that solve real-world problems. Let's work together to bring your ideas to life and create a high-performance digital experience!",
+  img: myImg,
+};
 
 const technologies = [
   {
@@ -233,4 +237,4 @@ const projects = [
   },
 ];
 
-export { services, intro, technologies, experiences, worksText, projects };
+export { services, about, technologies, experiences, worksText, projects };
