@@ -22,8 +22,11 @@ import java from "./tech/java.png";
 import git from "./tech/git.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
 import reactQuery from "./tech/react-query.png";
+import mongodb from "./tech/mongodb.png";
+import express from "./tech/express.png";
+import nodejs from "./tech/nodejs.png";
+import mern from "./tech/mern.png";
 
 import mile9 from "./company/mile9.png";
 
@@ -58,7 +61,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   socialBond,
   sumit,
   hirix,
@@ -66,4 +68,8 @@ export {
   mile9,
   myImg,
   devTinder,
+  mongodb,
+  express,
+  nodejs,
+  mern,
 };

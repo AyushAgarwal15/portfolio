@@ -18,6 +18,11 @@ import {
   reactQuery,
   mile9,
   myImg,
+  mongodb,
+  express,
+  nodejs,
+  creator,
+  mern,
 } from "../assets";
 
 export const navLinks = [
@@ -28,6 +33,18 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "tech",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "contact",
@@ -41,20 +58,16 @@ export const navLinks = [
 
 const services = [
   {
+    title: "Software Engineer",
+    icon: creator,
+  },
+  {
     title: "Software Developer",
     icon: backend,
   },
   {
-    title: "Front-End Developer",
+    title: "Full Stack Developer",
     icon: web,
-  },
-  {
-    title: "React.js Developer",
-    icon: reactjs,
-  },
-  {
-    title: "JavaScript Developer",
-    icon: javascript,
   },
 ];
 
@@ -92,6 +105,18 @@ const technologies = [
   {
     name: "React Query",
     icon: reactQuery,
+  },
+  {
+    name: "Node.js",
+    icon: nodejs,
+  },
+  {
+    name: "Express.js",
+    icon: express,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
     name: "Tailwind CSS",
