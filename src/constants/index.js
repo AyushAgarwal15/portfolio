@@ -12,9 +12,9 @@ import {
   figma,
   java,
   socialBond,
+  devTinder,
   sumit,
   hirix,
-  threejs,
   reactQuery,
   mile9,
   myImg,
@@ -149,6 +149,64 @@ const worksText = `Following projects showcases my skills and experience through
               technologies, and manage projects effectively.`;
 
 const projects = [
+  {
+    name: "DevTinder",
+    description:
+      "A robust full-stack developer matching platform featuring real-time chat, GitHub profile integration, intelligent matching algorithms, premium subscription tiers and many more",
+    tags: [
+      {
+        name: "mern-stack",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongoose",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "socket.io",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "axios",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jwt",
+        color: "green-text-gradient",
+      },
+    ],
+    image: devTinder,
+    source_code_link: "https://github.com/AyushAgarwal15/DevTinder-Frontend",
+    live_link: "https://devtinder-ayush.vercel.app/login",
+  },
   {
     name: "Social Bond",
     description:

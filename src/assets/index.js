@@ -30,6 +30,7 @@ import mile9 from "./company/mile9.png";
 import myImg from "./my-image/my-image.jpg";
 
 import socialBond from "./social-bond.png";
+import devTinder from "./devtinder.png";
 import sumit from "./sumit.png";
 import hirix from "./hirix.png";
 
@@ -64,4 +65,5 @@ export {
   reactQuery,
   mile9,
   myImg,
+  devTinder,
 };
