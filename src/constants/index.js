@@ -295,4 +295,22 @@ const projects = [
   },
 ];
 
-export { services, about, technologies, experiences, worksText, projects };
+const education = {
+  degree: "Bachelor of Technology (B.Tech)",
+  field: "Computer Science & Engineering",
+  institution: "MIIT, Meerut",
+  duration: "2019 - 2023",
+  score: "CGPA: 8.14/10",
+  educationText:
+    "My academic journey equipped me with strong foundations in computer science, software engineering principles, and practical problem-solving skills that I leverage in my professional career.",
+};
+
+export {
+  services,
+  about,
+  technologies,
+  experiences,
+  worksText,
+  projects,
+  education,
+};
