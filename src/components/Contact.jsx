@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 
 import { styles } from "../styles";
 import { MenCanvas } from "./canvas";
@@ -181,11 +181,10 @@ const Contact = () => {
             )}
           </label>
           <Tilt
-            options={{
-              max: 20,
-              scale: 1,
-              speed: 450,
-            }}
+            tiltMaxAngleX={20}
+            tiltMaxAngleY={20}
+            scale={1}
+            transitionSpeed={450}
             className="flex justify-end"
           >
             {" "}

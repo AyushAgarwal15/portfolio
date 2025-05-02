@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 
 import { styles } from "../styles";
 import { education } from "../constants";
@@ -11,11 +11,10 @@ const EducationCard = () => {
   return (
     <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
         className="bg-tertiary p-8 rounded-2xl sm:w-[800px] w-full mx-auto"
       >
         <div className="mt-1">
