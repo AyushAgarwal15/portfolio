@@ -54,7 +54,7 @@ const Navbar = () => {
               <a
                 key={nav.id}
                 target="_blank"
-                href="https://drive.google.com/file/d/1P8SsQ56zW0tMIHOHHhELdJD0ZjXAMOzL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RuAvE2iuvTGbW9M80OOKPjNAzh_NmdAL/view?usp=sharing"
                 className={
                   "text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
                 }
@@ -94,7 +94,7 @@ const Navbar = () => {
                   <a
                     key={nav.id}
                     target="_blank"
-                    href="https://drive.google.com/file/d/1P8SsQ56zW0tMIHOHHhELdJD0ZjXAMOzL/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1RuAvE2iuvTGbW9M80OOKPjNAzh_NmdAL/view?usp=sharing"
                     className={
                       "text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
                     }
