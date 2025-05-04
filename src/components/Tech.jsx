@@ -6,28 +6,20 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import Card from "./Card";
 
 const Tech = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const isSmallScreen = window.innerWidth < 1024;
 
   return (
     <>
-      <div className="lg:hidden">
-        <p className={`${styles.sectionSubText} text-center`}>My Tech Stack</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Technical Skills.
-        </h2>
-      </div>
-      <motion.div className="hidden lg:block" variants={textVariant()}>
+      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>My Tech Stack</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Technical Skills.
         </h2>
       </motion.div>
 
-      <div className="hidden lg:flex flex-row flex-wrap justify-center gap-10">
+      <div className="flex flex-row flex-wrap justify-center gap-10 mt-10">
         {technologies.map((technology, index) => (
           <div
             className="w-28 h-28 cursor-pointer"
@@ -48,18 +40,6 @@ const Tech = () => {
               {technology.name}
             </p>
           </div>
-        ))}
-      </div>
-
-      <div className="flex lg:hidden flex-row flex-wrap gap-10 mt-20">
-        {technologies.map((technology, index) => (
-          <Card
-            key={technology.name}
-            index={index}
-            title={technology.name}
-            icon={technology.icon}
-            animate={false}
-          />
         ))}
       </div>
     </>
