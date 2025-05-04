@@ -18,9 +18,71 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
+
+      // Check if at the top/hero section
+      if (scrollTop < 100) {
+        // Clear active state when at hero section
+        setActive("");
+
+        // Remove hashtag when on hero section
+        if (window.location.hash) {
+          window.history.replaceState(null, null, window.location.pathname);
+        }
+        return;
+      }
+
+      // Update active section based on scroll position
+      const sections = navLinks
+        .filter((nav) => nav.id !== "resume")
+        .map((nav) => {
+          const element = document.getElementById(nav.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return {
+              id: nav.id,
+              title: nav.title,
+              top: rect.top,
+              bottom: rect.bottom,
+              height: rect.height,
+            };
+          }
+          return null;
+        })
+        .filter(Boolean);
+
+      // Find the section that takes up most of the viewport
+      const viewportHeight = window.innerHeight;
+      let maxVisibleSection = null;
+      let maxVisibleArea = 0;
+
+      sections.forEach((section) => {
+        const visibleTop = Math.max(0, section.top);
+        const visibleBottom = Math.min(viewportHeight, section.bottom);
+        const visibleArea = Math.max(0, visibleBottom - visibleTop);
+
+        if (visibleArea > maxVisibleArea) {
+          maxVisibleArea = visibleArea;
+          maxVisibleSection = section;
+        }
+      });
+
+      if (maxVisibleSection) {
+        setActive(maxVisibleSection.title);
+
+        // Update URL hash without scrolling
+        const currentHash = window.location.hash;
+        const newHash = `#${maxVisibleSection.id}`;
+
+        if (currentHash !== newHash) {
+          window.history.replaceState(null, null, newHash);
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Initial check
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
