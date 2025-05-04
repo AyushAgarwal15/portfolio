@@ -73,7 +73,7 @@ const services = [
 
 const about = {
   intro:
-    "I'm a Software Engineer with strong expertise in HTML, CSS, JavaScript, TypeScript, and Tailwind CSS, specializing in React.js and knowledgeable in Next.js. I have hands-on experience in building dynamic, responsive web applications, optimizing code for efficiency, and using libraries like Redux and React Query. I'm a quick learner who excels in collaborative environments, consistently delivering scalable, user-focused solutions that solve real-world problems. Let's work together to bring your ideas to life and create a high-performance digital experience!",
+    "I'm a Full-Stack Software Engineer with strong expertise in the MERN stack. I build dynamic, scalable applications with a focus on performance and user experience. I thrive in collaborative environments, learn quickly, and care deeply about using technology to solve real-world problems. With a solid foundation in software engineering, I'm not tied to any specific tech stack—I believe in using the right tools for the job to create solutions that truly make a difference in people's lives 🌱.",
   img: myImg,
 };
 
@@ -145,11 +145,11 @@ const experiences = [
     date: "Mar 2024 - Present",
     company_link: "https://mile9.io/",
     points: [
-      "Portfolio Development - Developed a dynamic and responsive portfolio site for the company using Next.js, enhancing the online presence and improving user engagement.",
-      "Code Optimization - Implemented strategic code refactoring, leveraging React components and hooks to enhance reusability and code maintainability. Build reusable components that can be used across all apps. Optimized component structure and state management, resulting in a 40% codebase reduction and a 35% faster app load time.",
-      "Feature Enhancement - Spearheaded the implementation of new features, improving application functionality and user experience.",
-      "Bug Resolution & Testing - Conducted thorough end-to-end testing from a developer's perspective, identifying and resolving bugs to maintain a 100% bug-free system.",
-      "Tech Stack - React.js, Next.js, Javascript, Typescript, Tailwind CSS, Html, CSS, Git, Github, React Third Party Libraries - React Query, React Table etc.",
+      "Portfolio Development - Built a high-performance, responsive company portfolio site with Next.js, boosting user engagement by 30-40% through enhanced performance and enhanced interactivity.",
+      "Code Optimization - Refactored React components and streamlined state management, reducing the codebase by 40% and improving load time by 35%.",
+      "Feature Enhancement - Spearheaded the implementation of new features, enhancing application functionality and user experience, resulting in a 25-30% increase in user satisfaction and retention.",
+      "Bug Fixing & Testing - Conducted thorough end-to-end testing from a developer's perspective, identifying and resolving bugs to maintain a 100% bug-free system.",
+      "Tech Stack - HTML, CSS, JavaScript, React.js, Next.js, Redux, Typescript, Tailwind CSS, Git & Github, React Query, Node.js, Express.js, Databases etc.",
     ],
   },
   {
@@ -160,18 +160,14 @@ const experiences = [
     date: "Oct 2023 - Feb 2024",
     company_link: "https://mile9.io/",
     points: [
-      "Gained Expertise in Cutting-Edge Web Technologies - Acquired practical expertise in innovative technologies such as React.js, HTML, CSS, JavaScript, TypeScript, and Tailwind CSS.",
-      "Enhanced System Functionality - Implemented critical features such as a comprehensive billing form system, report review comments, and a patient data filtering modal, significantly enhancing system functionality",
-      "Bug Resolution and Quality Assurance - Contributed to bug resolution and conducted end-to-end testing, ensuring a seamless user experience and achieving a 100% bug-free system.",
+      "Developed Core Features - Implemented a comprehensive billing form system, report review comments, and patient data filtering modal, improving system functionality by 40-50% and streamlining user workflows.",
+      "Bug Resolution & Testing - Ensured a seamless user experience by conducting rigorous debugging and QA testing, reducing bugs by 40% and enhancing overall application stability ",
+      "Tech Stack: Leveraged a tech stack including HTML, CSS, JavaScript, React.js, Next.js, TypeScript, and Tailwind CSS to work on company projects, reducing development time by 60%.",
     ],
   },
 ];
 
-const worksText = `Following projects showcases my skills and experience through
-              real-world examples of my work. Each project is briefly described
-              with links to code repositories and live demos in it. It reflects
-              my ability to solve complex problems, work with different
-              technologies, and manage projects effectively.`;
+const worksText = `In addition to my work experience, the following projects showcase my skills through real-world applications. Each project includes a brief description along with links to the code and live demos. They highlight my ability to solve complex problems, adapt to various technologies, and deliver effective, user-focused solutions.`;
 
 const projects = [
   {

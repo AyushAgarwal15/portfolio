@@ -48,7 +48,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden md:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((nav) =>
             nav.id === "resume" ? (
               <a
@@ -75,7 +75,7 @@ const Navbar = () => {
           )}
         </ul>
 
-        <div className="md:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
