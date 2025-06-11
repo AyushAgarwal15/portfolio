@@ -10,9 +10,7 @@ import {
   tailwind,
   git,
   figma,
-  java,
   socialBond,
-  devTinder,
   sumit,
   hirix,
   reactQuery,
@@ -22,7 +20,7 @@ import {
   express,
   nodejs,
   creator,
-  mern,
+  nextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -58,20 +56,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Software Engineer",
-    icon: creator,
+    title: "Frontend Developer",
+    icon: web,
   },
   {
-    title: "Software Developer",
+    title: "React.js Developer",
+    icon: reactjs,
+  },
+  {
+    title: "Full Stack Developer (MERN)",
     icon: backend,
   },
   {
-    title: "Front-End Developer",
-    icon: web,
-  },
-  {
-    title: "Full Stack Developer",
-    icon: web,
+    title: "Software Engineer",
+    icon: creator,
   },
 ];
 
@@ -103,6 +101,10 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
     name: "Redux",
     icon: redux,
   },
@@ -111,20 +113,20 @@ const technologies = [
     icon: reactQuery,
   },
   {
-    name: "Node.js",
-    icon: nodejs,
-  },
-  {
-    name: "Express.js",
-    icon: express,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Express.js",
+    icon: express,
+  },
+  {
+    name: "Node.js",
+    icon: nodejs,
   },
   {
     name: "git",
@@ -133,10 +135,6 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "Core Java",
-    icon: java,
   },
 ];
 

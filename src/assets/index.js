@@ -27,6 +27,7 @@ import mongodb from "./tech/mongodb.png";
 import express from "./tech/express.png";
 import nodejs from "./tech/nodejs.png";
 import mern from "./tech/mern.png";
+import nextjs from "./tech/nextjs.jpg";
 
 import mile9 from "./company/mile9.png";
 
@@ -72,4 +73,5 @@ export {
   express,
   nodejs,
   mern,
+  nextjs
 };
