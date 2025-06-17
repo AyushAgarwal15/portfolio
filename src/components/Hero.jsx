@@ -20,8 +20,7 @@ const Hero = () => {
             <span className="text-[#915EFF]">Ayush</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a Full-Stack Software Engineer 🧑‍💻 Using tech to solve real-world
-            🌍 problems and drive impact.
+           A Frontend Engineer — prioritizing performance and code readability, thinking beyond what AI can automate.
           </p>
         </div>
       </div>

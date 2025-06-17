@@ -1,5 +1,4 @@
 import {
-  backend,
   web,
   javascript,
   typescript,
@@ -56,17 +55,17 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Engineer",
     icon: web,
   },
-  {
-    title: "React.js Developer",
-    icon: reactjs,
-  },
-  {
-    title: "Full Stack Developer (MERN)",
-    icon: backend,
-  },
+  // {
+  //   title: "React.js Developer",
+  //   icon: reactjs,
+  // },
+  // {
+  //   title: "Full Stack Developer (MERN)",
+  //   icon: backend,
+  // },
   {
     title: "Software Engineer",
     icon: creator,
@@ -75,7 +74,7 @@ const services = [
 
 const about = {
   intro:
-    "I'm a Full-Stack Software Engineer with strong expertise in the MERN stack. I build dynamic, scalable applications with a focus on performance and user experience. I thrive in collaborative environments, learn quickly, and care deeply about using technology to solve real-world problems. With a solid foundation in software engineering, I'm not tied to any specific tech stack—I believe in using the right tools for the job to create solutions that truly make a difference in people's lives 🌱.",
+    "I'm an Experienced Frontend Developer with 1.5+ years building fast, responsive, and user-centric web applications using React.js, Next.js, TypeScript and Tailwind CSS. I focus on writing clean, readable, and scalable code, always thinking about performance, reusability, and maintainability. Currently seeking frontend roles where I can contribute strong technical skills and grow with a collaborative team🌱.",
   img: myImg,
 };
 
@@ -147,11 +146,11 @@ const experiences = [
     date: "Mar 2024 - Present",
     company_link: "https://mile9.io/",
     points: [
-      "Portfolio Development - Built a high-performance, responsive company portfolio site with Next.js, boosting user engagement by 30-40% through enhanced performance and enhanced interactivity.",
-      "Code Optimization - Refactored React components and streamlined state management, reducing the codebase by 40% and improving load time by 35%.",
-      "Feature Enhancement - Spearheaded the implementation of new features, enhancing application functionality and user experience, resulting in a 25-30% increase in user satisfaction and retention.",
-      "Bug Fixing & Testing - Conducted thorough end-to-end testing from a developer's perspective, identifying and resolving bugs to maintain a 100% bug-free system.",
-      "Tech Stack - HTML, CSS, JavaScript, React.js, Next.js, Redux, Typescript, Tailwind CSS, Git & Github, React Query, Node.js, Express.js, Databases etc.",
+      "Portfolio Development: Built a responsive company portfolio website with Next.js, improving Core Web Vitals and boosting user interaction by 35%.",
+      "Code Optimization: Refactored React components and implemented Redux/React Query for efficient state management, reducing the codebase by 40% and improving load time by 35%. ",
+      "Feature Enhancement: Delivered core healthcare features, including a patient details modal (replacing a slower slider and improving speed by 70–80%), billing forms, report comments, and advanced data filters, resulting in a 40–50% overall functionality boost.",
+      "Dashboard Development: Designed and developed a comprehensive hospital dashboard to manage 10,000+ patient records efficiently, improving user experience and reducing retrieval time by 40%.",
+      "Tech Stack: HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, React Query, Tailwind CSS, Git & Github.",
     ],
   },
   {
@@ -162,9 +161,9 @@ const experiences = [
     date: "Oct 2023 - Feb 2024",
     company_link: "https://mile9.io/",
     points: [
-      "Developed Core Features - Implemented a comprehensive billing form system, report review comments, and patient data filtering modal, improving system functionality by 40-50% and streamlining user workflows.",
-      "Bug Resolution & Testing - Ensured a seamless user experience by conducting rigorous debugging and QA testing, reducing bugs by 40% and enhancing overall application stability ",
-      "Tech Stack: Leveraged a tech stack including HTML, CSS, JavaScript, React.js, Next.js, TypeScript, and Tailwind CSS to work on company projects, reducing development time by 60%.",
+      "Developed Core Features: Contributed extensively during internship by developing 10+ key features, resolving 100+ bugs, and gaining a comprehensive understanding of the system architecture and workflow, resulting in a 40–50% improvement in overall system performance and user efficiency.",
+      "Bug Resolution & Testing: Ensured a seamless user experience by conducting rigorous debugging and QA testing, reducing bugs by 40% and enhancing overall application stability.",
+      "Tech Stack: HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, React Query, Tailwind CSS, Git & Github.",
     ],
   },
 ];
