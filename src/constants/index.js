@@ -74,7 +74,7 @@ const services = [
 
 const about = {
   intro:
-    "I'm an Experienced Frontend Developer with 1.5+ years building fast, responsive, and user-centric web applications using React.js, Next.js, TypeScript and Tailwind CSS. I focus on writing clean, readable, and scalable code, always thinking about performance, reusability, and maintainability. Currently seeking frontend roles where I can contribute strong technical skills and grow with a collaborative team🌱.",
+    "I'm an Experienced Frontend Developer with 1+ years building fast, responsive, and user-centric web applications using React.js, Next.js, TypeScript and Tailwind CSS. I focus on writing clean, readable, and scalable code, always thinking about performance, reusability, and maintainability. Currently seeking frontend roles where I can contribute strong technical skills and grow with a collaborative team🌱.",
   img: myImg,
 };
 
