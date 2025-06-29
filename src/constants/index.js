@@ -171,94 +171,6 @@ const experiences = [
 const worksText = `In addition to my work experience, the following projects showcase my skills through real-world applications. Each project includes a brief description along with links to the code and live demos. They highlight my ability to solve complex problems, adapt to various technologies, and deliver effective, user-focused solutions.`;
 
 const projects = [
-  // {
-  //   name: "DevTinder",
-  //   description:
-  //     "A robust full-stack developer matching platform featuring real-time chat, GitHub profile integration, intelligent matching algorithms, premium subscription tiers and many more",
-  //   tags: [
-  //     {
-  //       name: "mern-stack",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "react.js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "typescript",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "redux",
-  //       color: "orange-text-gradient",
-  //     },
-  //     {
-  //       name: "node.js",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "express.js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "mongoose",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "socket.io",
-  //       color: "orange-text-gradient",
-  //     },
-  //     {
-  //       name: "axios",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "jwt",
-  //       color: "green-text-gradient",
-  //     },
-  //   ],
-  //   image: devTinder,
-  //   source_code_link: "https://github.com/AyushAgarwal15/DevTinder-Frontend",
-  //   live_link: "https://devtinder-ayush.vercel.app/login",
-  // },
-  {
-    name: "Social Bond",
-    description:
-      "A seamless social platform connecting users through engaging content and top-tier features. Key Features - Secure authentication, top creator showcases, like/save options, detailed posts, & user-friendly profile management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "react-query",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "appwrite",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: socialBond,
-    source_code_link: "https://github.com/AyushAgarwal15/social-bond",
-    live_link: "https://social-bond.vercel.app/sign-in",
-  },
   {
     name: "Hirix",
     description:
@@ -292,7 +204,7 @@ const projects = [
   {
     name: "SUMIT",
     description:
-      "An article summarizer that converts long articles into clear and brief summaries. Key Features - Article Summarization, URL History, Instant Historical Summaries.",
+      "An AI-powered article summarizer that transforms lengthy content into clear, concise summaries. Key features include real-time summarization, URL history, instant access to past summaries, one-click sharing, and more.",
     tags: [
       {
         name: "react",
