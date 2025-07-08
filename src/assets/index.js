@@ -28,6 +28,7 @@ import express from "./tech/express.png";
 import nodejs from "./tech/nodejs.png";
 import mern from "./tech/mern.png";
 import nextjs from "./tech/nextjs.jpg";
+import quickshow from "./quickshow.png";
 
 import mile9 from "./company/mile9.png";
 
@@ -73,5 +74,6 @@ export {
   express,
   nodejs,
   mern,
-  nextjs
+  nextjs,
+  quickshow,
 };

@@ -20,6 +20,7 @@ import {
   nodejs,
   creator,
   nextjs,
+  quickshow,
 } from "../assets";
 
 export const navLinks = [
@@ -171,6 +172,45 @@ const experiences = [
 const worksText = `In addition to my work experience, the following projects showcase my skills through real-world applications. Each project includes a brief description along with links to the code and live demos. They highlight my ability to solve complex problems, adapt to various technologies, and deliver effective, user-focused solutions.`;
 
 const projects = [
+  {
+    name: "Quickshow",
+    description:
+      "QuickShow is a movie ticket booking application that enables users to browse movies, select seats, and complete bookings with a seamless Stripe-powered checkout experience, accompanied by an admin dashboard. Key Features - Movie Listings, Seat Selection, Stripe Checkout, My Bookings, Favorites Page, and a robust Admin Dashboard to manage movies, shows, users, and bookings.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "jwt",
+        color: "pink-text-gradient",
+      },
+      
+    ],
+    image: quickshow,
+    source_code_link: "https://github.com/AyushAgarwal15/QuickShow",
+    live_link: "https://quick-show-zuez.vercel.app/",
+  },
   {
     name: "Hirix",
     description:
