@@ -171,7 +171,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-none overflow-y-auto"
             />
             <p className="text-white text-sm w-full text-right mt-4">
               {form.message.length}/1000 characters left.
@@ -200,7 +200,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="hidden lg:block xl:flex-1 xl:h-auto md:h-[550px] h-[400px]"
+        className="w-full xl:flex-1 xl:h-auto md:h-[550px] sm:h-[450px] h-[350px]"
       >
         <MenCanvas />
       </motion.div>

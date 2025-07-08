@@ -43,17 +43,22 @@ const PlanetCanvas = () => {
     };
   }, []);
 
+  const handleContextLoss = (e) => e.preventDefault();
+
   return (
     <Canvas
       shadows
       frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1, 1]}
+      gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance" }}
       camera={{
         fov: 45,
         near: 0.1,
         far: 200,
         position: [-1, 6, 6],
+      }}
+      onCreated={({ gl }) => {
+        gl.domElement.addEventListener("webglcontextlost", handleContextLoss, false);
       }}
     >
       <Suspense fallback={<CanvasLoader />}>

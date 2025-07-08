@@ -22,8 +22,11 @@ const MenCanvas = () => {
     <Canvas
       shadows
       frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={[1, 1]}
+      gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance" }}
+      onCreated={({ gl }) => {
+        gl.domElement.addEventListener("webglcontextlost", (e) => e.preventDefault(), false);
+      }}
       camera={{
         fov: 45,
         near: 0.1,

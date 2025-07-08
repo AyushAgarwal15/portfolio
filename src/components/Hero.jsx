@@ -1,11 +1,47 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { styles } from "../styles";
 import { ComputerCanvas } from "./canvas";
 
 const Hero = () => {
+  // Roles to cycle through in the hero section (order matters)
+  const roles = [
+    "Software Engineer",
+    "Frontend Developer",
+    "Full Stack Developer",
+    "Freelancer",
+  ];
+
+  const maxRoleLength = Math.max(...roles.map((r) => r.length));
+
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  // Typing effect configuration
+  const typingSpeed = 90; // ms per character
+  const pauseDelay = 1400; // pause after finishing a word
+
+  // Typewriter logic
+  useEffect(() => {
+    let timeout;
+    const currentRole = roles[roleIndex];
+
+    if (charIndex < currentRole.length) {
+      timeout = setTimeout(() => setCharIndex(charIndex + 1), typingSpeed);
+    } else {
+      // Word finished, wait then move to next
+      timeout = setTimeout(() => {
+        setCharIndex(0);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, pauseDelay);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, roleIndex]);
+
   return (
-    <section className={`relative w-full min-h-screen lg:h-screen mx-auto`}>
+    <section className={`relative w-full min-h-screen lg:h-screen xl:h-auto mx-auto`}>
       <div
         className={`lg:absolute inset-0 top-[100px] pt-[100px] lg:pt-0  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -19,13 +55,28 @@ const Hero = () => {
             Hi 🙋‍♂️ <br className="block lg:hidden" /> I'm{" "}
             <span className="text-[#915EFF]">Ayush</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-           A Frontend Engineer — prioritizing performance and code readability, thinking beyond what AI can automate.
+          {/* Animated rotating roles */}
+          <p className="mt-2 text-white-100 text-[20px] sm:text-[22px] lg:text-[25px] leading-snug">
+            A&nbsp;
+            <span
+              className="text-[#915EFF] hidden sm:inline-block"
+            >
+              {roles[roleIndex].substring(0, charIndex)}
+            </span>
+            <span
+              className="text-[#915EFF] inline-block sm:hidden"
+              style={{ minWidth: "min(100%, 14rem)" }}
+            >
+              {roles[roleIndex].substring(0, charIndex)}
+            </span>
+            &nbsp;– thinking beyond what AI 🤖 can automate.
           </p>
         </div>
       </div>
 
-      <ComputerCanvas />
+      <div className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[650px]">
+        <ComputerCanvas />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full lg:flex justify-center items-center hidden ">
         <a href="#about">

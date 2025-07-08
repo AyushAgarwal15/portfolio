@@ -13,6 +13,12 @@
   color-scheme: dark;
 }
 
+/* Prevent unwanted horizontal scrolling on mobile */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

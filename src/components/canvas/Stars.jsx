@@ -53,12 +53,22 @@ const StarsCanvas = () => {
     return () => setMounted(false);
   }, []);
 
+  const handleContextLoss = (e) => {
+    e.preventDefault();
+  };
+
   if (error) return null;
 
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1] hidden lg:block">
+    <div className="w-full h-auto absolute inset-0 z-[-1]">
       {mounted && (
-        <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]}>
+        <Canvas
+          camera={{ position: [0, 0, 1] }}
+          dpr={[1, 1]}
+          onCreated={({ gl }) => {
+            gl.domElement.addEventListener("webglcontextlost", handleContextLoss, false);
+          }}
+        >
           <Suspense fallback={null}>
             <Stars />
           </Suspense>

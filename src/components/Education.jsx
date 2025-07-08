@@ -15,7 +15,7 @@ const EducationCard = () => {
         tiltMaxAngleY={45}
         scale={1}
         transitionSpeed={450}
-        className="bg-tertiary p-8 rounded-2xl sm:w-[800px] w-full mx-auto"
+        className="bg-tertiary p-8 rounded-2xl md:w-[800px] w-full mx-auto"
       >
         <div className="mt-1">
           <h3 className="text-white font-bold text-[24px]">

@@ -17,9 +17,19 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_link,
+  disableMotion = false,
 }) => {
+  const Wrapper = disableMotion ? "div" : motion.div;
+
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <Wrapper
+      {...(!disableMotion && {
+        variants: fadeIn("up", "spring", index * 0.5, 0.75),
+        initial: "hidden",
+        whileInView: "show",
+        viewport: { once: true },
+      })}
+    >
       <Tilt
         tiltMaxAngleX={45}
         tiltMaxAngleY={45}
@@ -36,7 +46,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <div className="flex justify-between m-3 card-img_hover">
+          <div className="flex justify-between m-3 card-img_hover flex-wrap">
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
             <div className="flex items-center gap-2">
               <div
@@ -75,15 +85,18 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </Wrapper>
   );
 };
 
 const Works = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1024);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 1024);
+
+    // Set initial state
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -121,9 +134,14 @@ const Works = () => {
         </>
       )}
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            {...project}
+            disableMotion={typeof window !== "undefined" && window.innerWidth < 640}
+          />
         ))}
       </div>
     </>

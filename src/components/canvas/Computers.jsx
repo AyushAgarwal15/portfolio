@@ -53,14 +53,22 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Prevent WebGL context lost
+  const handleContextLoss = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Canvas
       frameloop="demand"
       shadows
-      dpr={[1, 2]}
+      dpr={isMobile ? [1, 1] : [1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-      className="hidden lg:block"
+      gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance" }}
+      className="block w-full"
+      onCreated={({ gl }) => {
+        gl.domElement.addEventListener("webglcontextlost", handleContextLoss, false);
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

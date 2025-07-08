@@ -9,7 +9,6 @@ import {
   tailwind,
   git,
   figma,
-  socialBond,
   sumit,
   hirix,
   reactQuery,
@@ -21,6 +20,7 @@ import {
   creator,
   nextjs,
   quickshow,
+  backend,
 } from "../assets";
 
 export const navLinks = [
@@ -56,26 +56,23 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Engineer",
-    icon: web,
-  },
-  // {
-  //   title: "React.js Developer",
-  //   icon: reactjs,
-  // },
-  // {
-  //   title: "Full Stack Developer (MERN)",
-  //   icon: backend,
-  // },
-  {
     title: "Software Engineer",
     icon: creator,
   },
+  {
+    title: "Frontend Developer",
+    icon: web,
+  },
+  {
+    title: "Full Stack Developer",
+    icon: backend,
+  },
+ 
 ];
 
 const about = {
   intro:
-    "I'm an Experienced Frontend Developer with 1+ years building fast, responsive, and user-centric web applications using React.js, Next.js, TypeScript and Tailwind CSS. I focus on writing clean, readable, and scalable code, always thinking about performance, reusability, and maintainability. Currently seeking frontend roles where I can contribute strong technical skills and grow with a collaborative team🌱.",
+    "I'm an Experienced Software Engineer with 1+ years building fast, responsive, and user-centric web applications using React.js, Next.js, TypeScript and Tailwind CSS. I focus on writing clean, readable, and scalable code, always thinking about performance, reusability, and maintainability. Currently seeking Frontend / Full Stack Developer roles where I can contribute strong technical skills and grow with a collaborative team🌱.",
   img: myImg,
 };
 
