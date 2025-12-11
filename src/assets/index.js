@@ -32,7 +32,7 @@ import quickshow from "./quickshow.png";
 
 import mile9 from "./company/mile9.png";
 
-import myImg from "./my-image/my-image.jpg";
+import myImg from "./my-image/my-image.png";
 
 import socialBond from "./social-bond.png";
 import devTinder from "./devtinder.png";
