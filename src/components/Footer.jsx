@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-primary flex flex-col md:flex-row items-center justify-center md:justify-around py-4 gap-4 flex-wrap shadow-lg shadow-white">
       <p className="text-base text-secondary text-center">
-        &copy; 2025 Ayush Agarwal. All rights reserved.
+        &copy; {new Date().getFullYear()} Ayush Agarwal. All rights reserved.
       </p>
       <div className="flex items-center gap-4 px-4 md:px-0">
         <Tilt

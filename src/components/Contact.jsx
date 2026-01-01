@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { MenCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import Toast from "./Toast";
 
 const Contact = () => {
   const formRef = useRef();
@@ -18,6 +19,11 @@ const Contact = () => {
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
 
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState({
+    isVisible: false,
+    message: "",
+    type: "success",
+  });
 
   const handleChange = (e) => {
     const { target } = e;
@@ -96,7 +102,11 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setToast({
+            isVisible: true,
+            message: "Thank you. I will get back to you as soon as possible.",
+            type: "success",
+          });
 
           setForm({
             name: "",
@@ -108,7 +118,11 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          setToast({
+            isVisible: true,
+            message: "Ahh, something went wrong. Please try again.",
+            type: "error",
+          });
         }
       );
   };
@@ -120,8 +134,15 @@ const Contact = () => {
   }, [form.name, form.email, form.message]);
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    <>
+      <Toast
+        message={toast.message}
+        type={toast.type}
+        isVisible={toast.isVisible}
+        onClose={() => setToast((prev) => ({ ...prev, isVisible: false }))}
+      />
+      <div
+        className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -204,7 +225,8 @@ const Contact = () => {
       >
         <MenCanvas />
       </motion.div>
-    </div>
+      </div>
+    </>
   );
 };
 
