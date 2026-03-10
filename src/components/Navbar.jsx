@@ -116,7 +116,7 @@ const Navbar = () => {
               <a
                 key={nav.id}
                 target="_blank"
-                href="https://drive.google.com/file/d/1RuAvE2iuvTGbW9M80OOKPjNAzh_NmdAL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1CjfFnBdX2yn8OaYVqnbqCUSYUKYeS9KK/view?usp=drive_link"
                 className="relative group"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-sm opacity-70 group-hover:opacity-100 transition duration-300"></span>
