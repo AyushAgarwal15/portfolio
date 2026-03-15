@@ -137,7 +137,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Associate Software Engineer",
+    title: "Software Engineer",
     company_name: "Mile9 (A Product Based Tech Startup)",
     icon: mile9,
     iconBg: "#E6DEDD",
