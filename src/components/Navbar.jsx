@@ -171,7 +171,7 @@ const Navbar = () => {
                   <a
                     key={nav.id}
                     target="_blank"
-                    href="https://drive.google.com/file/d/1RuAvE2iuvTGbW9M80OOKPjNAzh_NmdAL/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1CjfFnBdX2yn8OaYVqnbqCUSYUKYeS9KK/view?usp=drive_link"
                     className="relative inline-flex items-center px-5 py-2 font-semibold text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full shadow-[0_0_10px_rgba(167,139,250,0.3)] transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_rgba(167,139,250,0.5)] hover:scale-105"
                   >
                     {nav.title}
